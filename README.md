@@ -29,9 +29,20 @@ Searched for events within the last 5 hours where a remote IP address failed to 
 ![image](https://github.com/user-attachments/assets/3c38992a-5d8f-4300-babc-af394935bfd1)
 
 <p>
-<img src="https://github.com/user-attachments/assets/a1f27344-c7bd-43a7-870a-48db901d135c" &emsp; &emsp;
-<img src="https://github.com/user-attachments/assets/3ecd848f-b646-418a-a505-6153216bc3da"
+<img src="https://github.com/user-attachments/assets/a1f27344-c7bd-43a7-870a-48db901d135c"  alt="KQL Query"/> &emsp; &emsp;
+<img src="https://github.com/user-attachments/assets/3ecd848f-b646-418a-a505-6153216bc3da"   alt="KQL Query Results"/>
 </p>
+
+### 2. Searched the `DeviceLogonEvents` Table a Second Time
+
+Searched for events within the last 5 hours to see if the malicious IP addresses discovered in Step 1 successfully logged into any devices. No successful logins were detected from these IP addresses.
+
+**Query used to locate events:**
+
+![image](https://github.com/user-attachments/assets/49941831-9220-4af4-8cea-7b20498a80c0)
+
+![image](https://github.com/user-attachments/assets/c7602fa3-db3e-4ef1-aa10-5e8f5e7f79a6)
+
 
 
 

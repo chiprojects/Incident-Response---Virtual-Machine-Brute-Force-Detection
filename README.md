@@ -33,6 +33,8 @@ Searched for events within the last 5 hours where a remote IP address failed to 
 <img src="https://github.com/user-attachments/assets/3ecd848f-b646-418a-a505-6153216bc3da"   alt="KQL Query Results"/>
 </p>
 
+---
+
 ### 2. Searched the `DeviceLogonEvents` Table a Second Time
 
 Searched for events within the last 5 hours to see if the malicious IP addresses discovered in Step 1 successfully logged into any devices. No successful logins were detected from these IP addresses.
@@ -42,6 +44,39 @@ Searched for events within the last 5 hours to see if the malicious IP addresses
 ![image](https://github.com/user-attachments/assets/49941831-9220-4af4-8cea-7b20498a80c0)
 
 ![image](https://github.com/user-attachments/assets/c7602fa3-db3e-4ef1-aa10-5e8f5e7f79a6)
+
+---
+
+### 3. Isolated the affected devices in Microsoft Defender
+
+All 8 impacted devices were isolated in Microsoft Defender for Endpoint, and an antimalware scan was run to ensure no malware was present.
+
+**Ex. 1: Device: win-vm-grand:**
+![image](https://github.com/user-attachments/assets/759080c1-42e8-4875-bae7-c6fef186d571)
+
+---
+
+### 4. Updated NSG(network security group) attached to the virtual machine
+
+The network security group (NSG) rules were updated to block RDP access from the public internet. RDP is now only accessible from authorized home IP addresses to maintain secure remote access. As a result, any RDP attempt from unauthorized IP addresses will be denied by a default deny rule at the bottom of the NSG rule list.
+
+![image](https://github.com/user-attachments/assets/aaef6360-8393-48cd-bd03-2b5deb64321d)
+
+A corporate policy proposal was also submitted to enforce this configuration for all virtual machines moving forward.
+
+---
+
+### 5. Restored impacted virtual machines
+
+Reviewed and completed write-up for incident resolution. Finalized reporting and closed out the incident in Microsoft Sentinel as a true positive.
+
+![image](https://github.com/user-attachments/assets/5e6c7a40-2dba-4bae-b12c-8a943c56c7b7)
+
+
+
+
+
+
 
 
 
